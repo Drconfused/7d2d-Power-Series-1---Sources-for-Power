@@ -1,0 +1,143 @@
+<Drconfused_Power_Series1>
+<append xpath="/items">
+
+<!-- * BATTERIES 	-->
+	<!-- small Batteries AA -->
+	<!-- super durable battery -->
+<!-- * ENGINES	-->
+	<!-- tool engine -->
+<!-- * SOLAR CELLS	-->
+<!-- purified silicone -->
+
+<!-- END OF CONTENTS AND START TO THE MADNESS -->
+
+<!-- * BATTERIES			-->
+		<!-- small Batteries AA -->
+			<item name="battery_small_single">
+				<property name="CustomIcon" value="Drs_battery_single"/>
+				<property name="HoldType" value="45"/>
+				<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+				<property name="VehicleSlotType" value="battery"/>
+				<property name="Material" value="MresourceScrapLeadSmall"/>
+				<property name="RepairTools" value="resourceScrapLead"/>
+				<property name="Stacknumber" value="1"/>
+				<property name="Weight" value="1"/>
+				<property name="EconomicValue" value="10"/>
+				<property name="Group" value="Resources"/>
+				<property name="DegradationBreaksAfter" value="false"/>
+				<property class="Attributes">
+					<property name="DegradationMax" value="200,1200"/> <!-- needed for electrical calculations -->
+					<property name="BatteryMaxLoadInVolts" value="24, 36"/>
+					<property name="BatteryDischargeTimeInMinutes" value="30,90"/>
+				</property>
+				<effect_group>
+					<passive_effect name="ModSlots" operation="base_set" value="0"/>
+					<passive_effect name="DegradationMax" operation="base_set" value="200,1200" tier="1,6"/>
+				</effect_group>	
+			</item>
+		
+		<!-- super durable battery -->
+			<item name="battery_SuperDurable">
+				<property name="CustomIcon" value="Drs_enhanced_battery"/>
+				<property name="HoldType" value="45"/>
+				<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+				<property name="VehicleSlotType" value="battery"/>
+				<property name="Material" value="MresourceScrapLeadLarge"/>
+				<property name="RepairTools" value="resourceRepairKit"/>
+				<property name="Stacknumber" value="1"/>
+				<property name="Weight" value="160"/>
+				<property name="EconomicValue" value="500"/>
+				<property name="Group" value="Resources"/>
+				<property name="DegradationBreaksAfter" value="false"/>
+				<property class="Attributes">
+					<property name="DegradationMax" value="5000,10000"/> <!-- needed for electrical calculations -->
+					<property name="BatteryMaxLoadInVolts" value="24, 48"/>
+					<property name="BatteryDischargeTimeInMinutes" value="90,180"/>
+				</property>
+				<effect_group>
+					<passive_effect name="ModSlots" operation="base_set" value="0"/>
+					<passive_effect name="DegradationMax" operation="base_set" value="5000,10000" tier="1,6"/>
+				</effect_group>
+			</item>
+
+	<item name="junk_batteries">
+		<property name="CustomIcon" value="Drs_battery_junk"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property name="Material" value="Mlead"/>
+		<property name="Weight" value="1"/>
+		<property name="Stacknumber" value="250"/>
+		<property name="EconomicValue" value="5"/>
+		<property name="EconomicBundleSize" value="10"/>
+		<property name="Group" value="Basics,Decor/Miscellaneous"/>
+		<property name="CraftingIngredientExp" value="2"/>
+		<property name="CraftingIngredientTime" value="2"/>
+	</item>
+
+
+<!-- * ENGINES	-->
+	<!-- tool engine -->
+		<!-- Will bring about with release of Power Series 2 -->
+
+		
+<!-- * SOLAR CELLS	-->
+	<!-- mini solarCell -->
+		<item name="solarCell_mini">
+			<property name="CustomIcon" value="Drs_solarcell_mini"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="3"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="Group" value="Resources"/>
+			<property name="SellableToTrader" value="true"/>
+			<property class="Attributes">
+				<property name="DegradationMax" value="300,1200"/>
+			</property>
+			<effect_group>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="300,1200" tier="1,6"/>
+			</effect_group>
+		</item>
+
+	<!-- super durable solarCell -->
+		<item name="solarCell_SuperDurable">
+			<property name="CustomIcon" value="solarCell"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="15"/>
+			<property name="EconomicValue" value="4000"/>
+			<property name="Group" value="Resources"/>
+			<property name="SellableToTrader" value="true"/>
+			<property class="Attributes">
+				<property name="DegradationMax" value="5000,10000"/>
+			</property>
+			<effect_group>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="5000,10000" tier="1,6"/>
+			</effect_group>
+		</item>
+
+<!-- purified silicone -->
+	<item name="purifiedSilicone">
+		<property name="CustomIcon" value="DrsSilicon"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property name="Material" value="MresourceScrapPolymers"/>
+		<property name="Stacknumber" value="1000"/>
+		<property name="EconomicValue" value="50"/>
+		<property name="Group" value="Resources"/>
+		<property name="CraftingIngredientTime" value="2"/>
+	</item>
+
+</append>
+</Drconfused_Power_Series1>

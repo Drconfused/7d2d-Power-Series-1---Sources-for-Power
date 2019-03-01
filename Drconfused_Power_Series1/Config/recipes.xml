@@ -1,0 +1,173 @@
+<Drconfused_Power_Series1>
+
+<!-- * BATTERY BANK UPGRADES AND BATTERIES 	-->
+	<!-- * MINI BATTERYBANK		-->
+	<!-- * ENHANCED BATTERYBANK	-->
+	<!-- * BATTERIES			-->
+		<!-- small Batteries AA -->
+		<!-- super durable battery -->
+<!-- * GENERATOR BANK UPGRADES AND ENGINES	-->
+	<!-- generator bank max fuel 1	-->
+	<!-- generator bank max fuel 2	-->
+	<!-- small engine -->
+<!-- * SOLAR BANK UPGRADES AND SOLAR CELLS	-->
+
+
+<!-- END OF CONTENTS AND START TO THE MADNESS -->
+
+
+
+<append xpath="/recipes">
+
+<!-- * BATTERY BANK UPGRADES AND BATTERIES 	-->
+	<!-- * MINI BATTERYBANK		-->
+		<recipe name="batterybank_mini" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceScrapPolymers" count="5"/>
+			<ingredient name="resourceScrapIron" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+		</recipe>
+		
+	<!-- * ENHANCED BATTERYBANK	-->	
+		<recipe name="batterybank_enhanced" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceForgedSteel" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceElectricParts" count="20"/>
+			<ingredient name="resourceInsulator" count="2"/>
+		</recipe>
+		
+	<!-- * BATTERIES			-->
+		<!-- small Batteries AA -->
+		<recipe name="battery_small_single" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceScrapPolymers" count="1"/>
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceScrapLead" count="2"/>
+			<ingredient name="resourceInsulator" count="1"/>
+		</recipe>
+		
+		<!-- super durable battery -->
+		<recipe name="battery_SuperDurable" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="carBattery" count="1"/>
+			<ingredient name="resourceAcid" count="2"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+		</recipe>
+	
+		<!-- carBattery -->
+		<recipe name="carBattery">
+			<ingredient name="resourceScrapPolymers" count="5"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceAcid" count="3"/>
+			<ingredient name="resourceScrapLead" count="5"/>
+		</recipe>
+
+<!-- * GENERATOR BANK UPGRADES AND ENGINES	-->
+	<!-- generator bank max fuel 1	-->
+		<recipe name="generatorbank_MaxFuel_1" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="generatorbank" count="1"/>
+			<ingredient name="resourceForgedIron" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+		</recipe>
+	<!-- generator bank max fuel 2	-->	
+		<recipe name="generatorbank_MaxFuel_2" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="generatorbank_MaxFuel_1" count="1"/>
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+		</recipe>
+	<!-- small engine -->
+		<recipe name="smallEngine" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceForgedIron" count="15"/>
+			<ingredient name="resourceMechanicalParts" count="15"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="5"/>
+			<ingredient name="resourceInsulator" count="2"/>
+		</recipe>	
+
+<!-- * SOLAR BANK UPGRADES AND SOLAR CELLS	-->
+	<!-- mini solar bank -->
+	<recipe name="solarbank_mini" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceForgedSteel" count="5"/>
+		<ingredient name="resourceElectricParts" count="5"/>
+		<ingredient name="resourceInsulator" count="1"/>
+	</recipe>
+	<!-- solar bank -->
+	<recipe name="solarbank" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceElectricParts" count="25"/>
+		<ingredient name="resourceInsulator" count="4"/>
+	</recipe>
+	<!-- solar bank alternate recipe-->
+	<recipe name="solarbank" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceScrapPolymers" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+		<ingredient name="resourceElectricParts" count="4"/>
+		<ingredient name="solarbank_mini" count="4"/>
+	</recipe>
+	
+	<!-- enhanced solar bank -->	
+	<recipe name="solarbank_Enhanced" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="solarbank" count="10"/>
+		<ingredient name="resourceScrapPolymers" count="80"/>
+		<ingredient name="resourceForgedSteel" count="120"/>
+		<ingredient name="resourceElectricParts" count="40"/>
+		<ingredient name="resourceInsulator" count="10"/>
+	</recipe>
+
+<!-- SOLAR CELLS -->
+	<!-- mini solar cell -->	
+	<recipe name="solarCell_mini" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="purifiedSilicone" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+		<ingredient name="resourceElectricParts" count="2"/>
+		<ingredient name="resourceGlue" count="1"/>
+		<ingredient name="resourceBrokenGlass" count="10"/>"
+	</recipe>
+	<!-- mini solar cell alternate -->	
+	<recipe name="solarCell_mini" count="4" craft_area="workbench" tags="learnable">
+		<ingredient name="solarCell" count="1"/>
+		<ingredient name="resourceForgedSteel" count="1"/>
+		<ingredient name="resourceElectricParts" count="4"/>
+		<ingredient name="resourceBrokenGlass" count="4"/>"
+	</recipe>
+	
+	<!-- solar cell -->	
+	<recipe name="solarCell" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="purifiedSilicone" count="4"/>
+		<ingredient name="resourceForgedSteel" count="25"/>
+		<ingredient name="resourceElectricParts" count="10"/>
+		<ingredient name="resourceGlue" count="4"/>
+		<ingredient name="glassBusinessPlate" count="1"/>
+	</recipe>
+		<!-- solar cell alternate -->	
+	<recipe name="solarCell" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="solarCell_mini" count="1"/>
+		<ingredient name="resourceScrapPolymers" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+		<ingredient name="resourceElectricParts" count="4"/>
+		<ingredient name="resourceBrokenGlass" count="4"/>
+	</recipe>
+	
+	
+	<!-- super durable solar cell -->	
+	<recipe name="solarCell_SuperDurable" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="solarCell" count="5"/>
+		<ingredient name="purifiedSilicone" count="4"/>
+		<ingredient name="resourceForgedSteel" count="4"/>
+		<ingredient name="resourceElectricParts" count="4"/>
+		<ingredient name="resourceBrokenGlass" count="4"/>
+	</recipe>
+	
+	<recipe name="purifiedSilicone" count="1" craft_area="chemistryStation" tags="learnable">
+		<ingredient name="resourceScrapPolymers" count="2"/>
+		<ingredient name="resourcePotassiumNitratePowder" count="1"/>
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+	</recipe>		
+		
+		
+		
+		
+</append>
+</Drconfused_Power_Series1>

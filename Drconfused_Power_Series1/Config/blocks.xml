@@ -1,0 +1,275 @@
+<Drconfused_Power_Series1>
+
+<!-- * BATTERY BANK UPGRADES-->
+	<!-- * MINI BATTERYBANK		-->
+	<!-- * ENHANCED BATTERYBANK	-->
+<!-- * GENERATOR BANK UPGRADES AND ENGINES	-->
+	<!-- generator bank max fuel 1	-->
+	<!-- generator bank max fuel 2	-->
+<!-- * SOLAR BANK UPGRADES-->
+
+
+<!-- END OF CONTENTS AND START TO THE MADNESS -->
+
+
+<append xpath="/blocks">
+
+<!-- * BATTERY BANK UPGRADES-->
+	<!-- * MINI BATTERYBANK		-->
+		<block name="batterybank_mini">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="Drs_BatteryCharger"/>
+			<property name="Class" value="BatteryBank"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#@modfolder:Resources/DrsBatteryCharger.unity3d?DrsBatteryChargerPrefab"/><!-- Free model by Stratus3D -->
+			<!-- offset model x0 y-0.472 z 0 -->
+			<!-- <property name="ModelOffset" value="0,-0.15,0.2"/> -->
+			<!-- <property name="OnlySimpleRotations" value="true"/> -->
+			<property name="HandleFace" value="Bottom"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="MaxPower" value="30"/>
+			<property name="InputPerTick" value="5"/>
+			<property name="ChargePerInput" value="1"/>
+			<property name="OutputPerStack" value="4"/>
+			<property name="OutputPerCharge" value="30"/>
+			<property name="SlotItem" value="battery_small_single"/>
+			<!-- carBattery,battery_small_single,battery_SuperDurable -->
+			<property name="Group" value="Science"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="1"/>
+				<property name="resourceElectricParts" value="1"/>
+				<property name="resourceElectricParts" value="1"/>
+				<property name="resourceScrapPolymers" value="1"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapPolymers" count="1" tag="allHarvest"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="2,3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1" prob="0.6" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="1" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="0" prob="0.75" stick_chance="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="TakeDelay" value="5"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="Group" value="Science"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+			<!-- <property name="CanPickup" value="true"/> -->
+		</block>
+	<!-- * ENHANCED BATTERYBANK	-->
+		<block name="batterybank_enhanced">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="batterybank_enhanced"/>
+			<property name="Class" value="BatteryBank"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#@modfolder:Resources/DrsBatteryBankUpgrade.unity3d?DrsBatteryBankUpgradePrefab"/> 
+			<property name="HandleFace" value="Bottom"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="MaxPower" value="600"/>
+			<property name="InputPerTick" value="5"/>
+			<property name="ChargePerInput" value="1"/>
+			<property name="OutputPerStack" value="50"/>
+			<property name="OutputPerCharge" value="120"/>
+			<property name="SlotItem" value="battery_SuperDurable"/>
+			<!-- carBattery,battery_small_single -->
+			<property name="Group" value="Science"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="8"/>
+				<property name="resourceElectricParts" value="6"/>
+				<property name="resourceElectricParts" value="2"/>
+				<property name="resourceScrapPolymers" value="4"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="120" tag="allHarvest"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="2,3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.6" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+		</block>
+			
+<!-- * GENERATOR BANK UPGRADES AND ENGINES	-->
+	<!-- generator bank max fuel 1	-->
+		<block name="generatorbank_MaxFuel_1">
+			<property name="CustomIcon" value="Drs_Chipped_Generatorbank"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="Generator"/>
+			<property name="DisplayType" value="blockHardened" />
+			<property name="Material" value="Mmetal_medium"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="Entities/Electrical/generatorPrefab"/> <property name="HandleFace" value="Bottom"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="MaxFuel" value="2000"/>
+			<property name="OutputPerFuel" value="11250"/>
+			<property name="MaxPower" value="12250"/>
+			<property name="OutputPerStack" value="125"/>
+			<property name="SlotItem" value="smallEngine"/>
+			<property name="DisplayType" value="blockElectrical" />
+			<property name="Group" value="Science"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="8"/>
+				<property name="resourceMechanicalParts" value="8"/>
+				<property name="resourceElectricParts" value="8"/>
+				<property name="resourceElectricParts" value="3"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="192" tag="allHarvest"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.6" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+		</block>		
+	<!-- generator bank max fuel 2	-->	
+		<block name="generatorbank_MaxFuel_2">
+			<property name="CustomIcon" value="Drs_Chipped_Generatorbank"/>
+			<property name="CustomIconTint" value="ffb0b0"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="Generator"/>
+			<property name="DisplayType" value="blockHardened" />
+			<property name="Material" value="Mmetal_medium"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="Entities/Electrical/generatorPrefab"/> <property name="HandleFace" value="Bottom"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="MaxFuel" value="4000"/>
+			<property name="OutputPerFuel" value="11250"/>
+			<property name="MaxPower" value="12250"/>
+			<property name="OutputPerStack" value="200"/>
+			<property name="SlotItem" value="smallEngine"/>
+			<property name="DisplayType" value="blockElectrical" />
+			<property name="Group" value="Science"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="8"/>
+				<property name="resourceMechanicalParts" value="8"/>
+				<property name="resourceElectricParts" value="8"/>
+				<property name="resourceElectricParts" value="3"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="192" tag="allHarvest"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.6" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="TakeDelay" value="15"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="FilterTags" value="fdecor,felectrical"/>
+			<property name="SortOrder1" value="70a0"/>
+		</block>
+
+<!-- * SOLAR BANK UPGRADES-->
+
+<block name="solarbank_mini">
+	<property name="CustomIcon" value="Drs_Mini_Solar"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="SolarPanel"/>
+	<property name="Material" value="Mmetal_weak"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="#@modfolder:Resources/DrsSolarPanel.unity3d?DrsSolarPrefab"/>
+	<property name="DisplayType" value="blockElectricalMulti" />
+<!--	<property name="MultiBlockDim" value="1,1,1"/> -->
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterExchange" value="imposterRamp" param1="18"/>
+	<property name="DescriptionKey" value="powerSourceDesc"/>
+	<property name="OutputPerStack" value="7"/>
+	<property name="SlotItem" value="solarCell_mini"/>
+	<property name="MaxPower" value="45"/>
+	<property name="Group" value="Science"/>
+	<property name="ActivationDistance" value="6"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="5"/>
+		<property name="resourceElectricParts" value="3"/>
+		<property name="resourceElectricParts" value="2"/>
+		<property name="resourceScrapPolymers" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="" count="0" tag="salvageHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="TakeDelay" value="15"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="FilterTags" value="fdecor,felectrical"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+
+<block name="solarbank_Enhanced">
+	<property name="CustomIcon" value="solarbank"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="SolarPanel"/>
+	<property name="Material" value="Mmetal_weak"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Electrical/solar_panelPrefab"/>
+	<property name="DisplayType" value="blockElectricalMulti" />
+	<property name="MultiBlockDim" value="4,1,1"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterExchange" value="imposterRamp" param1="18"/>
+	<property name="DescriptionKey" value="powerSourceDesc"/>
+	<property name="OutputPerStack" value="50"/>
+	<property name="SlotItem" value="solarCell_SuperDurable"/>
+	<property name="MaxPower" value="300"/>
+	<property name="Group" value="Science"/>
+	<property name="ActivationDistance" value="6"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="5"/>
+		<property name="resourceElectricParts" value="3"/>
+		<property name="resourceElectricParts" value="2"/>
+		<property name="resourceScrapPolymers" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="" count="0" tag="salvageHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="TakeDelay" value="15"/>
+	<property name="EconomicValue" value="4000"/>
+	<property name="FilterTags" value="fdecor,felectrical"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>		
+</append>
+</Drconfused_Power_Series1>
