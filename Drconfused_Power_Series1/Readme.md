@@ -77,6 +77,9 @@ TO DO/WISH LIST
 	
 	
 VERSION HISTORY
+	0.03
+		Adding Disposable Battery Recharger for a low cost item that recharges your batteries.
+		
 	0.02
 		Mini battery was causing a null reference if it was drained and clicked on in the inventory. This was due to having lead as the repair material, but it appears to be not allowed. I have switched it to scrap iron as in my experience more abundant than repair kits. I will seek a better fix for this.
 	0.01	

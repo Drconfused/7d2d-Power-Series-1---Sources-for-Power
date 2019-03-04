@@ -21,7 +21,7 @@
 				<property name="VehicleSlotType" value="battery"/>
 				<property name="Material" value="MresourceScrapLeadSmall"/>
 				
-				<property name="RepairTools" value="resourceScrapIron"/>
+				<property name="RepairTools" value="disposable_Battery_Recharger"/>
 				
 				<property name="Stacknumber" value="1"/>
 				<property name="Weight" value="1"/>
@@ -38,6 +38,21 @@
 					<passive_effect name="DegradationMax" operation="base_set" value="200,1200" tier="1,6"/>
 				</effect_group>	
 			</item>
+		<!-- disposable_Battery_Recharger -->
+		    <item name="disposable_Battery_Recharger">
+				<property name="CustomIcon" value="Drs_disposable_Battery_Charger"/>
+				<property name="HoldType" value="45" />
+				<property name="Meshfile" value="Items/Misc/sackPrefab" />
+				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+				<property name="Material" value="MresourceScrapLeadLarge" />
+				<property name="Stacknumber" value="100" />
+				<property name="EconomicValue" value="10" />
+				<property name="RepairTime" value="0.5" />
+				<property name="RepairAmount" value="1200" />
+			  <property name="Group" value="Resources,Ammo/Weapons" />
+				<property name="CraftingSkillGroup" value="craftSkillGuns" />
+			</item>
+		
 		
 		<!-- super durable battery -->
 			<item name="battery_SuperDurable">
