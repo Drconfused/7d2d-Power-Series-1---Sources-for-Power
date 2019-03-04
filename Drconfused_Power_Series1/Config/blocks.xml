@@ -33,6 +33,7 @@
 			<property name="ImposterDontBlock" value="true"/>
 			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 			<property name="DescriptionKey" value="powerSourceDesc"/>
+			<property name="WireOffset" value="0,0,0.5" />
 			<property name="MaxPower" value="30"/>
 			<property name="InputPerTick" value="5"/>
 			<property name="ChargePerInput" value="1"/>

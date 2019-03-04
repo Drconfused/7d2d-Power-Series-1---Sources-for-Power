@@ -2,7 +2,7 @@ Drconfused_Power_Series1
 
 		<!--		Welcome to Drconfuseds madness! 			-->
 		<!--	DRCONFUSED POWER SERIES 1 - SOURCES OF POWER	-->
-							Version 0.01
+							Version 0.02
 
 
 					Refinements, upgrades and new sources for:
@@ -63,12 +63,22 @@ TO DO/WISH LIST
 	5. get unique models for the battery bank upgrades.
 	6. add in enhanced fuel
 	7. see if there is the capacity to have a moving power source on wheels.(can be modelled as a static object that doesn't move, but I want it to move!)
-	
-
-	
+	8. Fix the offset wire on my models 
+		- <property name="WireOffset" value="0,0,0.5" (this could be any value, till I figure out what works)
+		-(Jayick) the tag you need to set in Unity, is called Wire. So make a child in unity on your block, call it Wire, and set it to wherever you want it to be. WireOffset, BarrelOffset, SideOffset, all calling in tags from unity
+	9. Discover as many of the unity settings that will allow electricity to be an evern more wonderful thing!
+			Passive tags?? Jayick what are those?
+			BatteryMaxLoadInVolts
+			BatteryDischargeTimeInMinutes
+	10. Add a on/off indicator light to the mini Battery Bank
+			-animation bool trigger ?? (Jayick suggestion)
+	11. add an Industrial generator that has a light on it that is on/off indicator and lights the area.
+	12. Is there a way to make the degedation value show on the battery in a #?
 	
 	
 VERSION HISTORY
+	0.02
+		Mini battery was causing a null reference if it was drained and clicked on in the inventory. This was due to having lead as the repair material, but it appears to be not allowed. I have switched it to scrap iron as in my experience more abundant than repair kits. I will seek a better fix for this.
 	0.01	
 		Battery Bank Upgrades:
 			battery bank mini

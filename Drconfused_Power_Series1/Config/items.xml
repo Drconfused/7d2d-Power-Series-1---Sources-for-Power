@@ -20,7 +20,9 @@
 				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 				<property name="VehicleSlotType" value="battery"/>
 				<property name="Material" value="MresourceScrapLeadSmall"/>
-				<property name="RepairTools" value="resourceScrapLead"/>
+				
+				<property name="RepairTools" value="resourceScrapIron"/>
+				
 				<property name="Stacknumber" value="1"/>
 				<property name="Weight" value="1"/>
 				<property name="EconomicValue" value="10"/>
@@ -30,7 +32,7 @@
 					<property name="DegradationMax" value="200,1200"/> <!-- needed for electrical calculations -->
 					<property name="BatteryMaxLoadInVolts" value="24, 36"/>
 					<property name="BatteryDischargeTimeInMinutes" value="30,90"/>
-				</property>
+				</property>				
 				<effect_group>
 					<passive_effect name="ModSlots" operation="base_set" value="0"/>
 					<passive_effect name="DegradationMax" operation="base_set" value="200,1200" tier="1,6"/>
