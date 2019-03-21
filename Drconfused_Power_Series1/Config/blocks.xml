@@ -82,7 +82,7 @@
 			<property name="MaxPower" value="600"/>
 			<property name="InputPerTick" value="5"/>
 			<property name="ChargePerInput" value="1"/>
-			<property name="OutputPerStack" value="50"/>
+			<property name="OutputPerStack" value="63"/>
 			<property name="OutputPerCharge" value="120"/>
 			<property name="SlotItem" value="battery_SuperDurable"/>
 			<!-- carBattery,battery_small_single -->
@@ -111,7 +111,7 @@
 <!-- * GENERATOR BANK UPGRADES AND ENGINES	-->
 	<!-- generator bank max fuel 1	-->
 		<block name="generatorbank_MaxFuel_1">
-			<property name="CustomIcon" value="Drs_Chipped_Generatorbank"/>
+			<property name="CustomIcon" value="Drs_GeneratorMax1"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="Class" value="Generator"/>
 			<property name="DisplayType" value="blockHardened" />
@@ -120,7 +120,9 @@
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Mesh" value="models"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="Entities/Electrical/generatorPrefab"/> <property name="HandleFace" value="Bottom"/>
+		<!--	<property name="Model" value="Entities/Electrical/generatorPrefab"/> -->
+			<property name="Model" value="#@modfolder:Resources/DrsOldGenerator.unity3d?DrsOldGeneratorPrefab"/><!-- Free model by ?? -->
+			<property name="HandleFace" value="Bottom"/>
 			<property name="ImposterDontBlock" value="true"/>
 			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 			<property name="DescriptionKey" value="powerSourceDesc"/>
@@ -153,17 +155,22 @@
 		</block>		
 	<!-- generator bank max fuel 2	-->	
 		<block name="generatorbank_MaxFuel_2">
-			<property name="CustomIcon" value="Drs_Chipped_Generatorbank"/>
+			<property name="CustomIcon" value="Drs_GeneratorMax1"/>
 			<property name="CustomIconTint" value="ffb0b0"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="Class" value="Generator"/>
-			<property name="DisplayType" value="blockHardened" />
+			<!-- <property name="DisplayType" value="blockElectricalMulti" /> -->
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<property name="DisplayType" value="blockHardenedMulti" /> 
 			<property name="Material" value="Mmetal_medium"/>
 			<property name="StabilitySupport" value="false"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Mesh" value="models"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="Entities/Electrical/generatorPrefab"/> <property name="HandleFace" value="Bottom"/>
+			<!-- DrsOldGenerator2 -->
+		<!--	<property name="Model" value="Entities/Electrical/generatorPrefab"/> -->
+			<property name="Model" value="#@modfolder:Resources/DrsOldGenerator2.unity3d?DrsOldGenerator2Prefab"/><!-- Free model by ?? -->
+		<!--	<property name="HandleFace" value="Bottom"/> -->
 			<property name="ImposterDontBlock" value="true"/>
 			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 			<property name="DescriptionKey" value="powerSourceDesc"/>

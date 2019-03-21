@@ -2,14 +2,15 @@ Drconfused_Power_Series1
 
 		<!--		Welcome to Drconfuseds madness! 			-->
 		<!--	DRCONFUSED POWER SERIES 1 - SOURCES OF POWER	-->
-							Version 0.02
+							Version 0.04
 
 
 					Refinements, upgrades and new sources for:
 							Battery Power 
 							Generators
 							Solar Power
-					
+				
+#***CAUTION updating from pre0.04 make sure you backup your file, you need to pickup any of the geneeratorbank_MaxFuel_2 before updating your current game as the item has become a multiblock and may produce undesired effects or savegame corruption!!!!				
 
 Contents 
 * 	WHATS IN THE MOD?
@@ -77,6 +78,14 @@ TO DO/WISH LIST
 	
 	
 VERSION HISTORY
+
+	0.04	UNRELEASED
+		Made the localization file, 
+			run the localization.bat to have it appended so you can see the changes in game.
+		Adding in models for 
+			Generator Max fuel 2000
+			Generator Max Fule 4000 and attempting to make this a multiblock
+			
 	0.03
 		Adding Disposable Battery Recharger for a low cost item that recharges your batteries.
 		
